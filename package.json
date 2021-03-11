@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hbfernandes/slack-action.git"
+    "url": "git+https://github.com/hv-devsecops/slack-action.git"
   },
   "keywords": [
     "GitHub",
@@ -20,9 +20,9 @@
   "author": "hbfernandes",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hbfernandes/slack-action/issues"
+    "url": "https://github.com/hv-devsecops/slack-action/issues"
   },
-  "homepage": "https://github.com/hbfernandes/slack-action#readme",
+  "homepage": "https://github.com/hv-devsecops/slack-action#readme",
   "dependencies": {
     "@actions/core": "^1.2.3",
     "@slack/web-api": "^5.7.0"
