@@ -4,6 +4,20 @@ This action wraps the [Slack Web API](https://api.slack.com/web) in an action to
 ## Setup
 This actions performs it's actions using a slack bot token. To acquire one you need to create a Slack App, add the Bot token scope permissions required for the api calls you intend to perform and install it into your workspace. Once this is done the workspace token is available on the permissions page of your app and you can start using this action. 
 
+### Invite Github App
+
+The Github Actions app must be invited to the Slack channel that is going to receive notifications. You do this  via `/invite @Github` in the channel. 
+
+This is the error you will receive if the app isn’t added:
+
+```
+(node:30785) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+...
+Error: An API error occurred: not_in_channel
+```
+
+There are 2 Github apps in the HV Slack instance. It is hard to discern which is which in the Slack UI until you add one. Invite both if necessary.
+
 ## Usage
 Send a basic text message to a channel.
 ```
