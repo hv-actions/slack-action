@@ -22,15 +22,12 @@ There are 2 Github apps in the HV Slack instance. It is hard to discern which is
 Send a basic text message to a channel.
 ```
 - name: Slack Message                     
-  uses: hv-actions/slack-action@1.0
+  uses: hv-actions/slack-action@v2
   env:
     SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}   
   with:
-    args: |
-      {
-        "channel": "development",
-        "text": "testing slack messaging"
-      }
+    title: "testing slack messaging"
+    channel: "development"
 ```
 
 The `SLACK_TOKEN` environment variable must be present and have the necessary permissions for the method being used.
@@ -39,19 +36,35 @@ By default the api method is [chat.postMessage](https://api.slack.com/methods/ch
 
 ```
 - name: Slack Message                     
-  uses: hv-actions/slack-action@1.0   
+  uses: hv-actions/slack-action@v2   
   with:
     method: conversations.list
 ```
 
-The args parameter expects a string in the JSON format with any parameter that the method accepts. This way any custom message formatting is allowed.
+### Advanced Usage
+Custom fields are optional and can be any number with any values.
+```
+- name: Slack notification on success
+  uses: hv-actions/slack-action@v2
+  env:
+    SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+  with:
+    title: "testing slack messaging"
+    channel: "development"
+    message: "testing slack messaging"
+    custom-fields: |
+      Status=:sunglasses: SUCCESS
+      Branch=${{ github.ref }}
+```
+
+The raw-input parameter expects a string in the JSON format with any parameter that the method accepts. This way any custom message formatting is allowed.
 
 A more complex message:
 ```
 - name: Slack Message                     
-  uses: hv-actions/slack-action@1.0   
+  uses: hv-actions/slack-action@v2   
   with:
-    args: |
+    raw-input: |
       {
         "channel": "development",
         "attachments": [
