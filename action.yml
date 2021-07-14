@@ -5,8 +5,21 @@ inputs:
     description: 'The slack web api method to call'
     required: false
     default: 'chat.postMessage'
-  args:
-    description: 'The api method arguments'
+  title:
+    description: 'The title of the slack message'
+    required: true
+  channel:
+    description: 'The name of the slack channel to post message'
+    required: true   
+  message:
+    description: 'The plain text message'
+    required: false
+  custom-fields:
+    description: 'The multi-line key:values to send in slack message'
+    required: false
+    default: ""   
+  raw-input:
+    description: 'The api method arguments. If set, all other values are ignored.'
     required: false
     default: '{}'
 branding:

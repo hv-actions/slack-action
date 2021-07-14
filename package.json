@@ -1,6 +1,6 @@
 {
   "name": "slack-action",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "JavaScript Action that interacts with slack",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/hv-actions/slack-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.3",
+    "@actions/core": "^1.4.0",
     "@slack/web-api": "^5.7.0"
   },
   "devDependencies": {
