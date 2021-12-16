@@ -67,7 +67,7 @@ const rawInput = JSON.parse(core.getInput('raw-input'))
 
 
 var args ='{}'
-if(rawInput ==="{}")
+if(JSON.stringify(rawInput, null, 4) ==="{}")
   args = buildPayload()
 else
   args = rawInput
