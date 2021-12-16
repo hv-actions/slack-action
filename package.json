@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/hv-actions/slack-action#readme",
   "dependencies": {
-    "@actions/core": "^1.4.0",
-    "@slack/web-api": "^5.7.0"
+    "@actions/core": "^1.6.0",
+    "@slack/web-api": "^6.5.1"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.21.1",
