@@ -22,7 +22,7 @@ There are 2 Github apps in the HV Slack instance. It is hard to discern which is
 Send a basic text message to a channel.
 ```
 - name: Slack Message                     
-  uses: hv-actions/slack-action@v2
+  uses: hv-actions/slack-action@vmlaas-v2
   env:
     SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}   
   with:
@@ -36,7 +36,7 @@ By default the api method is [chat.postMessage](https://api.slack.com/methods/ch
 
 ```
 - name: Slack Message                     
-  uses: hv-actions/slack-action@v2   
+  uses: hv-actions/slack-action@vmlaas-v2   
   with:
     method: conversations.list
 ```
@@ -45,7 +45,7 @@ By default the api method is [chat.postMessage](https://api.slack.com/methods/ch
 Custom fields are optional and can be any number with any values.
 ```
 - name: Slack notification on success
-  uses: hv-actions/slack-action@v2
+  uses: hv-actions/slack-action@vmlaas-v2
   env:
     SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
   with:
@@ -62,7 +62,7 @@ The raw-input parameter expects a string in the JSON format with any parameter t
 A more complex message:
 ```
 - name: Slack Message                     
-  uses: hv-actions/slack-action@v2   
+  uses: hv-actions/slack-action@vmlaas-v2   
   with:
     raw-input: |
       {
