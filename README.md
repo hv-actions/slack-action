@@ -86,6 +86,7 @@ A more complex message:
         ]
       }
 ```
+For more info about the available fields: [https://api.slack.com/reference/messaging/attachments#legacy_fields](https://api.slack.com/reference/messaging/attachments#legacy_fields)
 
 ## Development
 To build the action simply run:
